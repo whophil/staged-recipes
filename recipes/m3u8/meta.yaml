@@ -1,0 +1,42 @@
+{% set name = "m3u8" %}
+{% set version = "0.7.1" %}
+
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/m3u8-{{ version }}.tar.gz
+  sha256: f9d7c1d0da802861a0cb651a59b617e49b5800e7efac9bd88591635f90c0a112
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python >=3.5
+  run:
+    - iso8601
+    - python >=3.5
+
+test:
+  imports:
+    - m3u8
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  home: https://github.com/globocom/m3u8
+  summary: Python m3u8 parser
+  license: MIT
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - sodre
