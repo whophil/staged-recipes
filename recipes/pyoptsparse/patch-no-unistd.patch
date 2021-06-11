@@ -1,0 +1,12 @@
+diff --git a/pyoptsparse/pyIPOPT/src/callback.c b/pyoptsparse/pyIPOPT/src/callback.c
+index 378663b..f5f17a0 100644
+--- a/pyoptsparse/pyIPOPT/src/callback.c
++++ b/pyoptsparse/pyIPOPT/src/callback.c
+@@ -34,7 +34,6 @@
+ */
+ 
+ #include "hook.h"
+-#include <unistd.h>
+ 
+ void logger(const char *fmt, ...)
+ {

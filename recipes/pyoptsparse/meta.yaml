@@ -10,6 +10,7 @@ source:
   sha256: 4f28eefa4eb5724f3d0a2b6118c45aedee24a7dea72a6672a49feb77220ecf32
   patches:
     - patch-IPOPT-setup-for-conda.patch
+    - patch-no-unistd.patch
 
 build:
   number: 0
