@@ -9,7 +9,8 @@ source:
   url: "https://github.com/mdolab/pyoptsparse/archive/refs/tags/v{{ version }}.tar.gz"
   sha256: 4f28eefa4eb5724f3d0a2b6118c45aedee24a7dea72a6672a49feb77220ecf32
   patches:
-    - patch-IPOPT-setup-for-conda.patch
+    - patch-IPOPT-setup-for-conda.patch      # [not win]
+    - patch-IPOPT-setup-for-conda-win.patch  # [win]
     - patch-no-unistd.patch
 
 build:
