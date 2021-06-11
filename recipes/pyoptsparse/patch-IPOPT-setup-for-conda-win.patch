@@ -7,7 +7,7 @@ index f875ca2..c2ebf0d 100644
              FILES,
              library_dirs=[IPOPT_LIB],
 -            libraries=["ipopt", "coinmumps", "coinmetis", "dl", "m", "blas", "lapack"],
-+            libraries=["ipopt-3", "mumps", "metis_common", "dl", "m", "blas", "lapack"],
++            libraries=["ipopt-3", "mumps_common", "metis", "dl", "m", "blas", "lapack"],
              extra_link_args=["-Wl,-rpath,%s -L%s" % (IPOPT_LIB, IPOPT_LIB)],
              include_dirs=[numpy_include, IPOPT_INC],
          )
